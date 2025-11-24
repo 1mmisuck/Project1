@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Статистика"
+            app:titleTextColor="#FFFFFF" />
+
+        <!-- Кнопка создания заявки -->
+        <Button
+            android:id="@+id/createRequestButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="Создать заявку"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Статистика"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <!-- Статистика по ремонту -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/totalRepairText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Общее количество заявок на ремонт: 0"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/repairInProgressText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Заявки на ремонт в работе: 0"
+                    android:textColor="#FFFFFF" />
+
+                <!-- Кнопка Подробнее для ремонта - выровнена по левому краю -->
+                <Button
+                    android:id="@+id/repairDetailsButton"
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="Подробнее"
+                    android:textColor="#DDDDDD"
+                    android:textSize="12sp"
+                    android:backgroundTint="#222222"
+                    android:padding="4dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/repairDoneText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Заявки на ремонт выполнены: 0"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="16dp" />
+
+        </LinearLayout>
+
+        <!-- Статистика по покраске -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/totalPaintText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Общее количество заявок на покраску: 0"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/paintInProgressText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Заявки на покраску в работе: 0"
+                    android:textColor="#FFFFFF" />
+
+                <!-- Кнопка Подробнее для покраски - выровнена по левому краю -->
+                <Button
+                    android:id="@+id/paintDetailsButton"
+                    android:layout_width="80dp"
+                    android:layout_height="36dp"
+                    android:text="Подробнее"
+                    android:textColor="#DDDDDD"
+                    android:textSize="12sp"
+                    android:backgroundTint="#222222"
+                    android:padding="4dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/paintDoneText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Заявки на покраску выполнены: 0"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="16dp" />
+
+        </LinearLayout>
+
+        <!-- Кнопки управления -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="16dp">
+
+            <!-- Кнопка обновления статистики -->
+            <Button
+                android:id="@+id/refreshButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Обновить статистику"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#2196F3" />
+
+            <!-- Кнопка удаления заявок -->
+            <Button
+                android:id="@+id/deleteRequestsButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Удалить все заявки"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#F44336" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/status_background_new"
+    android:layout_margin="8dp"
+    android:padding="12dp">
+
+    <!-- Верхняя часть с информацией -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Аватарка -->
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/avatar_background"
+            android:gravity="center"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/text_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="И"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Левая часть - информация о заявке -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_client_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Иван"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+7 999 123-45-67"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/text_car_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toyota Camry"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16.11.2024"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Для заявок на покраску - цвет -->
+            <TextView
+                android:id="@+id/text_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Цвет: красный"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp"
+                android:visibility="gone" />
+
+            <!-- Для заявок на ремонт - описание проблемы -->
+            <TextView
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Описание: проблемы с двигателем"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Правая часть - статус -->
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="В работе"
+            android:textColor="#DDDDDD"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="@drawable/status_background_new" />
+
+    </LinearLayout>
+
+    <!-- Нижняя часть с кнопками -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center">
+
+        <!-- Кнопка Выполнить/Отменить -->
+        <Button
+            android:id="@+id/button_complete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="Выполнить"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:textAllCaps="false" />
+
+        <!-- Кнопка Удалить -->
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="Удалить"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F44336"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</LinearLayout>
